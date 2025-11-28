@@ -1,10 +1,18 @@
 # Flex Trip
 ----------------------
-# 1. clone repository in vs code by 'git clone https://github.com/rajatsah95/flexTripBackend.git'
-# 2. install dependencies by 'npm i'
-# 3. create .env file inside flexTripBackend folder and then add variable 'MONGODB_URL' for mongodb storage, variable 'JWT_SECRET' for json web token and variable PORT for server as key in it.
-# 4. run server by 'npm run start'
-# 5. use below api for flexTripBackend
+## 1. clone repository in vs code by 'git clone https://github.com/rajatsah95/flexTripBackend.git'
+## 2. install dependencies by 'npm i'
+## 3. create .env file inside flexTripBackend folder and then add variable 'MONGODB_URL' for mongodb storage, variable 'JWT_SECRET' for json web token and variable PORT for server as key in it.
+## 4. run server by 'npm run start'
+## 5. use below api for flexTripBackend
+
+# deployed link
+## backend - https://flextripbackend.onrender.com/
+## frontend - https://sparkling-panda-8894e1.netlify.app/
+
+# github link
+## backend - https://github.com/rajatsah95/flexTripBackend
+## frontend - https://github.com/rajatsah95/flexTripFrontend
 
 ------------
 # Auth
