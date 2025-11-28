@@ -6,7 +6,7 @@ const { connection } = require("./config/mongoDbConnection.config");
 const cors = require('cors');
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({origin:"https://sparkling-panda-8894e1.netlify.app"}));
 app.use(express.json());
 
 app.get("/", (req, res) => {
