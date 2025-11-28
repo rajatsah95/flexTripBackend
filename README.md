@@ -1,6 +1,6 @@
 # Flex Trip
 ----------------------
-# 1. clone repository in vs code by 'git clone https://github.com/rajatsah95/billEasyLibrary.git'
+# 1. clone repository in vs code by 'git clone https://github.com/rajatsah95/flexTripBackend.git'
 # 2. install dependencies by 'npm i'
 # 3. create .env file inside flexTripBackend folder and then add variable 'MONGODB_URL' for mongodb storage, variable 'JWT_SECRET' for json web token and variable PORT for server as key in it.
 # 4. run server by 'npm run start'
