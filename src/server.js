@@ -1,8 +1,8 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const { AuthRouter } = require("./routes/auth.route");
-const { connection } = require("./config/mongodbConnection.config");
 const { TripRouter } = require("./routes/trip.route");
+const { connection } = require("./config/mongodbConnection.config");
 
 dotenv.config();
 const app = express();
@@ -16,7 +16,7 @@ app.use("/auth", AuthRouter);
 app.use("/trip", TripRouter);
 
 
-app.listen(PORT, async () => {
+app.listen(process.env.PORT, async () => {
   try {
     await connection;
     console.log("Database Connected");
