@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 const { AuthRouter } = require("./routes/auth.route");
 const { TripRouter } = require("./routes/trip.route");
 const { connection } = require("./config/mongoDbConnection.config");
-
+const cors = require('cors');
 dotenv.config();
 const app = express();
 app.use(cors());
