@@ -61,8 +61,10 @@ PUT/     https://flextripbackend.onrender.com/trip/:id
 
 body-
 {
-	"title":"To Kill a Mockingbird 2",
-	"author":"Harper Lee 2"
+	"name":"a",
+	"email":"a@gmail.com",
+	"phone":"0000000000",
+	"message":"a"
 }
 
 path parameter-
