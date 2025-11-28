@@ -16,14 +16,11 @@ app.use("/auth", AuthRouter);
 app.use("/trip", TripRouter);
 
 
-
-const PORT = 5000;
-
 app.listen(PORT, async () => {
   try {
     await connection;
     console.log("Database Connected");
-    console.log(`Server is running at ${PORT}`);
+    console.log(`Server is running at ${process.env.PORT}`);
   } catch (err) {
     console.log(err.message);
   }
