@@ -2,7 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const { AuthRouter } = require("./routes/auth.route");
 const { TripRouter } = require("./routes/trip.route");
-const { connection } = require("./config/mongodbConnection.config");
+const { connection } = require("./config/mongoDbConnection.config");
 
 dotenv.config();
 const app = express();
