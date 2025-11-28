@@ -1,10 +1,10 @@
-# billEasyLibrary
+# Flex Trip
 ----------------------
 # 1. clone repository in vs code by 'git clone https://github.com/rajatsah95/billEasyLibrary.git'
 # 2. install dependencies by 'npm i'
-# 3. create .env file inside billEasyLibrary folder and then add variable 'MONGODB_URL' for mongodb storage and variable 'JWT_SECRET' for json web token as key in it.
+# 3. create .env file inside flexTripBackend folder and then add variable 'MONGODB_URL' for mongodb storage, variable 'JWT_SECRET' for json web token and variable PORT for server as key in it.
 # 4. run server by 'npm run start'
-# 5. use below api for billEasyLibrary
+# 5. use below api for flexTripBackend
 
 ------------
 # Auth
@@ -12,46 +12,44 @@
 
 # Signup
 ---------
-POST/    http://localhost:5000/billEasyLibrary/auth/signup
+POST/    https://flextripbackend.onrender.com/auth/signup
 
 body-
 {
-	"name":"l",
-	"email":"l@gmail.com",
+	"name":"a",
+	"email":"a@gmail.com",
 	"password":"123"
 }
 
 # Login
 ----------
-POST/    http://localhost:5000/billEasyLibrary/auth/login
+POST/    https://flextripbackend.onrender.com/auth/login
 
 body-
 {
-	"email":"l@gmail.com",
+	"email":"a@gmail.com",
 	"password":"123"
 }
 
 -----------
-# Book
+# Trip Query
 -----------
 
 # Create
 ----------
-POST/    http://localhost:5000/billEasyLibrary/book
+POST/    https://flextripbackend.onrender.com/trip
 
 body-
 {
-	"title":"To Kill a Mockingbird",
-	"author":"Harper Lee",
-	"genre":"Fantasy"
+	"name":"a",
+	"email":"a@gmail.com",
+	"phone":"0000000000",
+	"message":"a"
 }
-
-headers-
-token as 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzgwMDhiMGQxMmFhM2MxMThhYTAxMyIsImVtYWlsIjoiYUBnbWFpbC5jb20iLCJpYXQiOjE3NDg1MDEwMTYsImV4cCI6MTc0ODUwNDYxNn0.4byosUPVdIv9XLUf2bckeI1o-JLVUJlPIuo_QVXFHCM'
 
 # Update
 -----------
-PUT/     http://localhost:5000/billEasyLibrary/book/:id
+PUT/     https://flextripbackend.onrender.com/trip/:id
 
 body-
 {
@@ -67,7 +65,7 @@ token as 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzgwMDhiMGQxMmFhM2MxM
 
 # Delete
 ----------
-DELETE/    http://localhost:5000/billEasyLibrary/book/:id
+DELETE/    https://flextripbackend.onrender.com/trip/:id
 
 path parameter-
 id  as  '683803b1aa5bca19b20c67be'
@@ -75,120 +73,15 @@ id  as  '683803b1aa5bca19b20c67be'
 headers-
 token as 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzgwMDhiMGQxMmFhM2MxMThhYTAxMyIsImVtYWlsIjoiYUBnbWFpbC5jb20iLCJpYXQiOjE3NDg1MDEwMTYsImV4cCI6MTc0ODUwNDYxNn0.4byosUPVdIv9XLUf2bckeI1o-JLVUJlPIuo_QVXFHCM'
 
-# getAllBook
+# getAllTrip
 --------------
-GET/       http://localhost:5000/billEasyLibrary/book
+GET/       https://flextripbackend.onrender.com/trip
 
 query parameters-
 pageNumber as   '1'
 pageSize   as   '10'
-author     as   'J.R.R. Tolkien'
-genre      as   'Fantasy'
-
-# getBookByIdWithReviewAndRating
-----------------------------------
-GET/       http://localhost:5000/billEasyLibrary/book/:id
-
-query parameters-
-pageNumber  as   '1'
-pageSize    as   '5'
-
-path parameter-
-id  as  '683803b1aa5bca19b20c67be'
-
-# getBookBySearch
--------------------
-GET/       http://localhost:5000/billEasyLibrary/search
-
-query parameters-
-searchText  as   'Tolkien' for author or 'lord of the Rings' for title(partial and case-insensitive)
-
-
------------
-# Review
------------
-
-# Create
-----------
-POST/      http://localhost:5000/billEasyLibrary/book/:id/review
-
-path parameter-
-id  as  '683803b1aa5bca19b20c67be'
-
-body-
-{
-	"review":"b"
-}
-
-headers-
-token as 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzgwMDhiMGQxMmFhM2MxMThhYTAxMyIsImVtYWlsIjoiYUBnbWFpbC5jb20iLCJpYXQiOjE3NDg1MDEwMTYsImV4cCI6MTc0ODUwNDYxNn0.4byosUPVdIv9XLUf2bckeI1o-JLVUJlPIuo_QVXFHCM'
-
-# Update
------------
-PUT/       http://localhost:5000/billEasyLibrary/review/:id
-
-path parameter-
-id  as  '683803b1aa5bca19b20c67be'
-
-body-
-{
-	"review":"aa"
-}
-
-headers-
-token as 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzgwMDhiMGQxMmFhM2MxMThhYTAxMyIsImVtYWlsIjoiYUBnbWFpbC5jb20iLCJpYXQiOjE3NDg1MDEwMTYsImV4cCI6MTc0ODUwNDYxNn0.4byosUPVdIv9XLUf2bckeI1o-JLVUJlPIuo_QVXFHCM'
-
-# Delete
-----------
-DELETE/    http://localhost:5000/billEasyLibrary/review/:id
-
-path parameter-
-id  as  '683803b1aa5bca19b20c67be'
-
-headers-
-token as 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzgwMDhiMGQxMmFhM2MxMThhYTAxMyIsImVtYWlsIjoiYUBnbWFpbC5jb20iLCJpYXQiOjE3NDg1MDEwMTYsImV4cCI6MTc0ODUwNDYxNn0.4byosUPVdIv9XLUf2bckeI1o-JLVUJlPIuo_QVXFHCM'
-
------------
-# Rating
------------
-
-# Create
-----------
-POST/    http://localhost:5000/billEasyLibrary/book/:id/rating
-
-path parameter-
-id  as  '683803b1aa5bca19b20c67be'
-
-body-
-{
-	"rating":3
-}
-
-headers-
-token as 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzgwMDhiMGQxMmFhM2MxMThhYTAxMyIsImVtYWlsIjoiYUBnbWFpbC5jb20iLCJpYXQiOjE3NDg1MDEwMTYsImV4cCI6MTc0ODUwNDYxNn0.4byosUPVdIv9XLUf2bckeI1o-JLVUJlPIuo_QVXFHCM'
-
-
-# Update
------------
-PUT/         http://localhost:5000/billEasyLibrary/rating/:id
-
-path parameter-
-id  as  '683803b1aa5bca19b20c67be'
-
-body-
-{
-	"rating":6
-}
-
-headers-
-token as 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzgwMDhiMGQxMmFhM2MxMThhYTAxMyIsImVtYWlsIjoiYUBnbWFpbC5jb20iLCJpYXQiOjE3NDg1MDEwMTYsImV4cCI6MTc0ODUwNDYxNn0.4byosUPVdIv9XLUf2bckeI1o-JLVUJlPIuo_QVXFHCM'
-
-# Delete
-----------
-DELETE/      http://localhost:5000/billEasyLibrary/rating/:id
-
-path parameter-
-id  as  '683803b1aa5bca19b20c67be'
+name       as   'a'
+email      as   'a@gmail.com'
 
 headers-
 token as 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzgwMDhiMGQxMmFhM2MxMThhYTAxMyIsImVtYWlsIjoiYUBnbWFpbC5jb20iLCJpYXQiOjE3NDg1MDEwMTYsImV4cCI6MTc0ODUwNDYxNn0.4byosUPVdIv9XLUf2bckeI1o-JLVUJlPIuo_QVXFHCM'
